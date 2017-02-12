@@ -274,9 +274,9 @@ class FloatingImageView : UIImageView {
     private let displayBorderColor : UIColor
     private var isSelected : Bool
     private var selectedOpacity : CGFloat = 1.0
-    private var unselectedOpacity : CGFloat = 0.20
+    private var unselectedOpacity : CGFloat = 0.07
     private let roundedCornerRadius : CGFloat = 6
-    private let displayedBorderWidth : CGFloat
+    private var displayedBorderWidth : CGFloat = 3.0
     private let displayImage : UIImage
     private let imageRotationAngle : CGFloat
     private var nonRotatedAngle : CGFloat = 0
@@ -348,7 +348,7 @@ class FloatingImageView : UIImageView {
     fileprivate func resetSelection() {
         isSelected = false
         self.alpha = self.unselectedOpacity
-        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.borderColor = UIColor.black.cgColor
     }
     
     /// Updates the UI for the floating view indicating that is has been selected.
