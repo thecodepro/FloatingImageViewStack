@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8m-p9-Y3j">
-                                <rect key="frame" x="119" y="623" width="137" height="30"/>
+                                <rect key="frame" x="16" y="617" width="137" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="137" id="q5h-Zo-wqp"/>
+                                    <constraint firstAttribute="width" constant="137" id="UwJ-X7-nYL"/>
                                 </constraints>
                                 <state key="normal" title="Remove Image"/>
                                 <connections>
@@ -32,25 +33,38 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuM-Gi-xIh" customClass="FloatingImageViewStack" customModule="FloatingImageViewStackExample" customModuleProvider="target">
-                                <rect key="frame" x="67" y="187" width="240" height="428"/>
+                                <rect key="frame" x="16" y="20" width="343" height="589"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="428" id="BjS-O0-ngK"/>
-                                    <constraint firstAttribute="width" constant="240" id="zok-pp-BxH"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suJ-HK-SR2">
+                                <rect key="frame" x="267" y="617" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="g11-Ie-Nrj"/>
+                                </constraints>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="addImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBu-yA-oaa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="E8m-p9-Y3j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="79F-EA-sLO"/>
-                            <constraint firstItem="MuM-Gi-xIh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="67.5" id="AM0-mV-xqf"/>
-                            <constraint firstItem="MuM-Gi-xIh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bu2-d4-1MY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E8m-p9-Y3j" secondAttribute="bottom" constant="14" id="ifo-6u-NSL"/>
+                            <constraint firstItem="E8m-p9-Y3j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3BU-F0-f2P"/>
+                            <constraint firstItem="E8m-p9-Y3j" firstAttribute="baseline" secondItem="suJ-HK-SR2" secondAttribute="baseline" id="3im-94-QAT"/>
+                            <constraint firstItem="E8m-p9-Y3j" firstAttribute="leading" secondItem="MuM-Gi-xIh" secondAttribute="leading" id="Fp4-Nf-EF2"/>
+                            <constraint firstAttribute="bottom" secondItem="E8m-p9-Y3j" secondAttribute="bottom" constant="20" symbolic="YES" id="KyU-ng-jVo"/>
+                            <constraint firstItem="suJ-HK-SR2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VYn-c2-Bd4"/>
+                            <constraint firstItem="E8m-p9-Y3j" firstAttribute="top" secondItem="MuM-Gi-xIh" secondAttribute="bottom" constant="8" symbolic="YES" id="XdM-Ij-2vP"/>
+                            <constraint firstItem="MuM-Gi-xIh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lR5-z8-6rX"/>
+                            <constraint firstItem="suJ-HK-SR2" firstAttribute="trailing" secondItem="MuM-Gi-xIh" secondAttribute="trailing" id="nq9-1D-7Pb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257" y="86"/>
+            <point key="canvasLocation" x="-258.39999999999998" y="85.907046476761622"/>
         </scene>
     </scenes>
 </document>

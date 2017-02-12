@@ -12,28 +12,23 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var floatingImageStack: FloatingImageViewStack!
     
-    
-    fileprivate let initialDataSource = [UIImage(named: "one")!,UIImage(named: "two")!]
-    fileprivate var imagestoAdd = [UIImage(named:"three")!, UIImage(named:"four")!, UIImage(named: "five")!]
+    fileprivate var imageDataSource = [UIImage(named: "one")!,UIImage(named: "two")!,UIImage(named:"three")!, UIImage(named:"four")!, UIImage(named: "five")!]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         floatingImageStack.delegate = self
-              floatingImageStack.addImagesToStack(imageSet: initialDataSource)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-  
-    }
-    
-    
+        
     func addtoStack() {
-        if let imageToAdd = imagestoAdd.first {
+        if let imageToAdd = imageDataSource.first {
             floatingImageStack.addImageToStack(imageToAdd: imageToAdd)
-            imagestoAdd.removeFirst()
+            imageDataSource.removeFirst()
         }
+    }
+    
+    @IBAction func addImage(_ sender: Any) {
+        addtoStack()
     }
     
     @IBAction func removeImage(_ sender: Any) {

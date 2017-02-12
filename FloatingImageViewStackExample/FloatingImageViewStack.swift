@@ -67,25 +67,6 @@ protocol FloatingImageViewContainerDelegate {
     private func configureUserInterface() {
     
         backgroundColor = color
-       
-        addStackTopView()
-    }
-    
-   
-    //MARK: - Stack Managemenet
-    
-    /// Adds an array of images to the floating image stack. 
-    /// before adding the floating images.
-    ///
-    /// - Parameter images: The images to add to the stack.
-    func addImagesToStack(imageSet images : [UIImage]) {
-        
-        for image in images {
-            buildAndAddFloatingImageview(with: image)
-        }
-        
-        let firstFloatingImage = floatingViewStack.first as! FloatingImageView
-        firstFloatingImage.selectFloatingView()
     }
     
     /// Adds a single image to the floating image stack. Computes the image
@@ -94,6 +75,11 @@ protocol FloatingImageViewContainerDelegate {
     ///
     /// - Parameter image: The image to add to the stack.
     func addImageToStack(imageToAdd image : UIImage) {
+        
+        if stackTopView == nil {
+            addStackTopView()
+        }
+        
         buildAndAddFloatingImageview(with: image)
     }
     
