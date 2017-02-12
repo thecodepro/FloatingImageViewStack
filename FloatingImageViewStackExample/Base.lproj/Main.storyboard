@@ -52,7 +52,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="g11-Ie-Nrj"/>
                                 </constraints>
-                                <state key="normal" title="Add Image"/>
+                                <state key="normal" title="Initialize"/>
                                 <connections>
                                     <action selector="addImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EBu-yA-oaa"/>
                                 </connections>
