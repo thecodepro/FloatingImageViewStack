@@ -9,7 +9,39 @@ FloatingImageViewStack is a simple custom control to let you layer floating imag
 FloatingImageViewStack is `IBDesignable` and many of the properties can be easily changed in the attributes inspect inside of interface builder.
 
 1. Drag a view onto your view controller and subclass it as `FloatingImageViewStack` in interface builder.
-2. 
+
+  [![Screen Shot 2017-02-11 at 8.06.48 PM.png](https://s27.postimg.org/hxakgdg9v/Screen_Shot_2017_02_11_at_8_06_48_PM.png)](https://postimg.org/image/yl22ivb1b/)
+
+2. Configure any properties via the attribute inspector.
+
+  [![Screen Shot 2017-02-11 at 8.07.01 PM.png](https://s24.postimg.org/6euu9ba2d/Screen_Shot_2017_02_11_at_8_07_01_PM.png)](https://postimg.org/image/di2poxfht/)
+  
+3. Assign the `FloatingImageViewContainerDelegate` to receive user interactions.
+
+```
+class ViewController: UIViewController {    
+    @IBOutlet weak var floatingImageStack: FloatingImageViewStack!
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        floatingImageStack.delegate = self
+    }
+ }
+ 
+extension ViewController : FloatingImageViewContainerDelegate {
+    func didSelectFloatingTop() {
+        addtoStack()
+    }
+    
+    func didSelectFloatingImage(selectedView: FloatingImageView) {
+        print("Selected a view from the stack")
+    }
+}
+
+```
+
+
+
 
 
 
