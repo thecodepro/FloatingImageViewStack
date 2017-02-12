@@ -37,11 +37,25 @@ extension ViewController : FloatingImageViewContainerDelegate {
      
     }
 }
-
 ```
 
+4. Finally, then simply add an image onto the stack.
 
+```  floatingImageStack.addImageToStack(imageToAdd: UIImage(named: "sample_image")!) 
+```
 
+5. Remove images from the stack via index.
+
+``` 
+ floatingImageStack.removeFloatingView(at: 0)
+```
+6. Remove images from the stack directly. 
+
+```
+  func didSelectFloatingImage(selectedView: FloatingImageView) {
+        floatingImageStack.removeSelectedFloatingView(viewToRemove: selectedView)
+    }
+```
 
 
 
