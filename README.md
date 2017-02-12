@@ -8,7 +8,19 @@ FloatingImageViewStack is a simple custom control to let you layer floating imag
 
 # How to Use and Setup 
 
-FloatingImageViewStack is `IBDesignable` and many of the properties can be easily changed in the attributes inspect inside of interface builder.
+FloatingImageViewStack is `IBDesignable` and many of the properties can be easily changed in the attributes inspect inside of interface builder. Listed below are all of the properties with default values that can be changed via Interface Builder.
+
+```
+@IBInspectable var verticalSpacing : CGFloat = 35
+@IBInspectable var borderColor : UIColor = UIColor.clear
+@IBInspectable var topBorderColor : UIColor = UIColor.black
+@IBInspectable var topColor : UIColor = UIColor.clear
+@IBInspectable var topOpacity : Float = 1.0
+@IBInspectable var angle : CGFloat = -45
+@IBInspectable var color : UIColor  = UIColor.clear
+@IBInspectable var selectedBorderWidth : CGFloat = 3.0
+@IBInspectable var animationDuration : CGFloat = 0.7
+```
 
 **Drag a view onto your view controller and subclass it as `FloatingImageViewStack` in interface builder.**
 
