@@ -1,6 +1,6 @@
 # FloatingImageViewStack
 
-FloatingImageViewStack is a simple custom control to let you layer floating images on top of eachother. Tap into any image in the stack to select the image and bring it into focus.
+FloatingImageViewStack is a simple custom control to let you layer floating images on top of eachother. Tap into any image in the stack to select the image and bring it into focus. Make sure to take a look at the example project included.
 
 [![Simulator Screen Shot Feb 11, 2017, 7.56.07 PM.png](https://s23.postimg.org/9e01vpbnv/Simulator_Screen_Shot_Feb_11_2017_7_56_07_PM.png)](https://postimg.org/image/4fcjh67uv/)
 
