@@ -8,15 +8,15 @@ FloatingImageViewStack is a simple custom control to let you layer floating imag
 
 FloatingImageViewStack is `IBDesignable` and many of the properties can be easily changed in the attributes inspect inside of interface builder.
 
-Drag a view onto your view controller and subclass it as `FloatingImageViewStack` in interface builder.
+**Drag a view onto your view controller and subclass it as `FloatingImageViewStack` in interface builder.**
 
   [![Screen Shot 2017-02-11 at 8.06.48 PM.png](https://s27.postimg.org/hxakgdg9v/Screen_Shot_2017_02_11_at_8_06_48_PM.png)](https://postimg.org/image/yl22ivb1b/)
 
-Configure any properties via the attribute inspector.
+**Configure any properties via the attribute inspector.**
 
   [![Screen Shot 2017-02-11 at 8.07.01 PM.png](https://s24.postimg.org/6euu9ba2d/Screen_Shot_2017_02_11_at_8_07_01_PM.png)](https://postimg.org/image/di2poxfht/)
   
-Assign the `FloatingImageViewContainerDelegate` to receive user interactions.
+**Assign the `FloatingImageViewContainerDelegate` to receive user interactions.**
 
 ```
   class ViewController: UIViewController {    
@@ -39,23 +39,30 @@ Assign the `FloatingImageViewContainerDelegate` to receive user interactions.
   }
 ```
 
-Finally, then simply add an image onto the stack.
+**Finally, then simply add an image onto the stack.**
 
 ```  
+
 floatingImageStack.addImageToStack(imageToAdd: UIImage(named: "sample_image")!) 
 
 ```
-Remove images from the stack via index.
+
+**Remove images from the stack by index.**
 
 ``` 
- floatingImageStack.removeFloatingView(at: 0)
-```
-Remove images from the stack directly. 
+
+floatingImageStack.removeFloatingView(at: 0)
 
 ```
+
+**Remove images from the stack directly.** 
+
+```
+
   func didSelectFloatingImage(selectedView: FloatingImageView) {
         floatingImageStack.removeSelectedFloatingView(viewToRemove: selectedView)
     }
+
 ```
 
 # Live Demonstration
