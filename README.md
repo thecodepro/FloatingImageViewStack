@@ -30,11 +30,11 @@ class ViewController: UIViewController {
  
 extension ViewController : FloatingImageViewContainerDelegate {
     func didSelectFloatingTop() {
-        addtoStack()
+       
     }
     
     func didSelectFloatingImage(selectedView: FloatingImageView) {
-        print("Selected a view from the stack")
+     
     }
 }
 
